@@ -18,3 +18,13 @@ If there is a build step required to get the example working, explain it here.
 
 To run the app, spin up an HTTP server and visit
 http://localhost/.../myexample/.
+
+## Todo
+[] add a task.
+[] check / uncheck all tasks. ( checked task means done )
+[] clear completed.
+[] show all / active / completed tasks.
+[] delete one task.
+[] rename a task.
+[] auto save tasks.
+[] auto load tasks.
