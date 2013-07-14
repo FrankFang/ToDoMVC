@@ -26,7 +26,7 @@
             }
         }
     });
-    require(['js/views/app'], function (AppView) {
+    require(['js_dist/views/app'], function (AppView) {
         new AppView();
     });
 })(window);

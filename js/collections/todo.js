@@ -1,4 +1,4 @@
-define(['backbone', 'js/models/todo', 'localStorage'],
+define(['backbone', 'js_dist/models/todo', 'localStorage'],
     function (Backbone, Todo, localStorage) {
         var Todos = Backbone.Collection.extend({
             model: Todo,

@@ -4,7 +4,7 @@
  * Date: 13-7-13
  * Time: 下午8:38
  */
-define(['backbone', 'jquery', 'underscore', 'js/collections/todo', 'js/views/todo'],
+define(['backbone', 'jquery', 'underscore', 'js_dist/collections/todo', 'js_dist/views/todo'],
     function (Backbone, $, _, Todos, TodoView) {
         var statusTemplate = '\
 <span id="todo-count"><strong><%= undoneCount ? undoneCount : 0 %></strong> item left</span>\

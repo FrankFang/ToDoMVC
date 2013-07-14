@@ -55,7 +55,6 @@ define(['backbone', 'jquery', 'underscore', 'localStorage'],
 
             handleCheck: function (e) {
                 var checked = e.currentTarget.checked;
-                var $target = $(e.currentTarget);
                 this.model.save('done', checked);
             },
 
