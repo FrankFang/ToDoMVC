@@ -1,0 +1,1 @@
+define(["backbone","js/models/todo","localStorage"],function(e,n,t){var o=e.Collection.extend({model:n,localStorage:new t("todos_db"),getDone:function(){return this.filter(function(e){return e.get("done")})},getUndone:function(){return this.filter(function(e){return!e.get("done")})}});return o});
