@@ -2,7 +2,7 @@
  * User: frank
  * Date: 13-7-14
  */
-define(['backbone', 'underscore'], function (Backbone, _) {
+define(['backbone'], function (Backbone) {
     var Todo = Backbone.Model.extend({
         defaults: {
             content: '',

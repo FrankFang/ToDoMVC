@@ -6,17 +6,45 @@
  */
 define(['backbone', 'jquery', 'underscore', 'js/collections/todo', 'js/views/todo'],
     function (Backbone, $, _, Todos, TodoView) {
+        var statusTemplate = '\
+<span id="todo-count"><strong><%= undoneCount ? undoneCount : 0 %></strong> item left</span>\
+<button id="clear-completed" class="<%= doneCount == 0 ? "hidden" : "" %>">Clear completed</button>\
+';
         var App = Backbone.View.extend({
 
             initialize: function () {
                 this.todos = new Todos;
-                this.listenTo(this.todos, 'add', this.addTodoView)
+                this.listenTo(this.todos, 'add', this.addTodoView);
+                this.listenTo(this.todos, 'all', this.render);
+                this.$toggleAll = $('#toggle-all');
+                var toggleCount = this.$toggleAll.find('.toggle').length;
+                this.todos.fetch();
+                if (this.$toggleAll.find('.toggle:checked').length === toggleCount && toggleCount !== 0) {
+                    $('#toggle-all')[0].checked = true;
+                } else {
+                    $('#toggle-all')[0].checked = false;
+                }
+                $('#new-todo').val('').focus();
             },
 
             el: '#todoapp',
 
+            template: _.template(statusTemplate),
+
             events: {
-                'keypress #new-todo': 'handleEnterText'
+                'keypress #new-todo': 'handleEnterText',
+                'change #toggle-all': 'handleToggleAll',
+                'click #clear-completed': 'clearDone'
+            },
+
+            render: function () {
+                var undoneCount = this.todos.getUndone().length;
+                var doneCount = this.todos.getDone().length;
+                $('#footer').html(this.template({undoneCount: undoneCount, doneCount: doneCount}));
+            },
+
+            clearDone: function () {
+                _.invoke(this.todos.getDone(), 'destroy');
             },
 
             handleEnterText: function (e) {
@@ -29,7 +57,7 @@ define(['backbone', 'jquery', 'underscore', 'js/collections/todo', 'js/views/tod
             },
 
             addTodo: function (content) {
-                this.todos.add({
+                this.todos.create({
                     content: content
                 });
             },
@@ -37,6 +65,17 @@ define(['backbone', 'jquery', 'underscore', 'js/collections/todo', 'js/views/tod
             addTodoView: function (todo) {
                 var todoView = new TodoView({model: todo});
                 $('#todo-list').prepend(todoView.render().$el);
+            },
+
+            handleToggleAll: function (e) {
+                var checked = e.currentTarget.checked;
+                this.toggleAll(checked);
+            },
+
+            toggleAll: function (done) {
+                this.todos.each(function (todo) {
+                    todo.save('done', done);
+                });
             }
 
         });

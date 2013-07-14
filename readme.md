@@ -20,11 +20,11 @@ To run the app, spin up an HTTP server and visit
 http://localhost/.../myexample/.
 
 ## Todo
-[] add a task.
-[] check / uncheck all tasks. ( checked task means done )
-[] clear completed.
-[] show all / active / completed tasks.
-[] delete one task.
-[] rename a task.
+[x] add a task.
+[x] check / uncheck all tasks. ( checked task means done )
+[x] clear completed.
+[-] show all / active / completed tasks.
+[x] delete one task.
+[x] rename a task.
 [] auto save tasks.
 [] auto load tasks.
