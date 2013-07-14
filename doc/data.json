@@ -1,0 +1,331 @@
+{
+    "project": {
+        "name": "ToDoMVC",
+        "description": "",
+        "version": "0.1.0"
+    },
+    "files": {
+        "js/collections/todo.js": {
+            "name": "js/collections/todo.js",
+            "modules": {},
+            "classes": {
+                "TodoCollection": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "js/models/todo.js": {
+            "name": "js/models/todo.js",
+            "modules": {},
+            "classes": {
+                "TodoModel": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "js/views/app.js": {
+            "name": "js/views/app.js",
+            "modules": {},
+            "classes": {
+                "AppView": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "js/views/todo.js": {
+            "name": "js/views/todo.js",
+            "modules": {},
+            "classes": {
+                "TodoView": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "js/main.js": {
+            "name": "js/main.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "TodoCollection": {
+            "name": "TodoCollection",
+            "shortname": "TodoCollection",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "js/collections/todo.js",
+            "line": 3,
+            "description": "TodoCollection",
+            "is_constructor": 1,
+            "type": "{Collection}"
+        },
+        "TodoModel": {
+            "name": "TodoModel",
+            "shortname": "TodoModel",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "js/models/todo.js",
+            "line": 6,
+            "description": "TodoModel",
+            "is_constructor": 1,
+            "type": "{Model}"
+        },
+        "AppView": {
+            "name": "AppView",
+            "shortname": "AppView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "js/views/app.js",
+            "line": 14,
+            "is_constructor": 1
+        },
+        "TodoView": {
+            "name": "TodoView",
+            "shortname": "TodoView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "js/views/todo.js",
+            "line": 17,
+            "description": "TodoView",
+            "is_constructor": 1
+        }
+    },
+    "classitems": [
+        {
+            "file": "js/collections/todo.js",
+            "line": 13,
+            "description": "get todos which are done.",
+            "itemtype": "method",
+            "name": "getDone",
+            "return": {
+                "description": "",
+                "type": "Array"
+            },
+            "class": "TodoCollection"
+        },
+        {
+            "file": "js/collections/todo.js",
+            "line": 24,
+            "description": "get todos which are not done.",
+            "itemtype": "method",
+            "name": "getUndone",
+            "return": {
+                "description": "",
+                "type": "Array"
+            },
+            "class": "TodoCollection"
+        },
+        {
+            "file": "js/models/todo.js",
+            "line": 1,
+            "description": "User: frank\nDate: 13-7-14",
+            "class": "TodoModel"
+        },
+        {
+            "file": "js/models/todo.js",
+            "line": 14,
+            "description": "content of the todo.",
+            "itemtype": "property",
+            "name": "content",
+            "type": "{string}",
+            "class": "TodoModel"
+        },
+        {
+            "file": "js/models/todo.js",
+            "line": 20,
+            "description": "done status of the todo.",
+            "itemtype": "property",
+            "name": "done",
+            "type": "{boolean}",
+            "class": "TodoModel"
+        },
+        {
+            "file": "js/views/app.js",
+            "line": 1,
+            "description": "Created with JetBrains PhpStorm.\nUser: frank\nDate: 13-7-13\nTime: 下午8:38",
+            "class": "AppView"
+        },
+        {
+            "file": "js/views/app.js",
+            "line": 20,
+            "itemtype": "method",
+            "name": "initialize",
+            "class": "AppView"
+        },
+        {
+            "file": "js/views/app.js",
+            "line": 42,
+            "description": "add event handles.",
+            "type": "{object}",
+            "itemtype": "property",
+            "name": "events",
+            "class": "AppView"
+        },
+        {
+            "file": "js/views/app.js",
+            "line": 53,
+            "description": "render the status bar",
+            "itemtype": "method",
+            "name": "render",
+            "class": "AppView"
+        },
+        {
+            "file": "js/views/app.js",
+            "line": 63,
+            "description": "clear tasks that is done.",
+            "itemtype": "method",
+            "name": "clearDone",
+            "class": "AppView"
+        },
+        {
+            "file": "js/views/app.js",
+            "line": 80,
+            "description": "create one todo model.",
+            "itemtype": "method",
+            "name": "addTodo",
+            "params": [
+                {
+                    "name": "content",
+                    "description": ""
+                }
+            ],
+            "class": "AppView"
+        },
+        {
+            "file": "js/views/app.js",
+            "line": 91,
+            "description": "add one todo element to UI",
+            "itemtype": "method",
+            "name": "addTodoView",
+            "params": [
+                {
+                    "name": "todo",
+                    "description": ""
+                }
+            ],
+            "class": "AppView"
+        },
+        {
+            "file": "js/views/app.js",
+            "line": 106,
+            "description": "toggle status of all todos.",
+            "itemtype": "method",
+            "name": "toggleAll",
+            "params": [
+                {
+                    "name": "done",
+                    "description": ""
+                }
+            ],
+            "class": "AppView"
+        },
+        {
+            "file": "js/views/todo.js",
+            "line": 1,
+            "description": "User: frank\nDate: 13-7-14",
+            "class": "TodoView"
+        },
+        {
+            "file": "js/views/todo.js",
+            "line": 27,
+            "description": "events",
+            "type": "{object}",
+            "itemtype": "property",
+            "name": "events",
+            "class": "TodoView"
+        },
+        {
+            "file": "js/views/todo.js",
+            "line": 39,
+            "description": "init",
+            "itemtype": "method",
+            "name": "initialize",
+            "class": "TodoView"
+        },
+        {
+            "file": "js/views/todo.js",
+            "line": 48,
+            "description": "render UI of one todo",
+            "itemtype": "method",
+            "name": "render",
+            "return": {
+                "description": "self",
+                "type": "TodoView"
+            },
+            "class": "TodoView"
+        },
+        {
+            "file": "js/views/todo.js",
+            "line": 71,
+            "description": "update content of one todo",
+            "itemtype": "method",
+            "name": "updateContent",
+            "params": [
+                {
+                    "name": "content",
+                    "description": ""
+                }
+            ],
+            "class": "TodoView"
+        },
+        {
+            "file": "js/views/todo.js",
+            "line": 85,
+            "description": "delete the todo.",
+            "itemtype": "method",
+            "name": "del",
+            "class": "TodoView"
+        },
+        {
+            "file": "js/main.js",
+            "line": 1,
+            "description": "entry of script.",
+            "class": ""
+        }
+    ],
+    "warnings": [
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " js/collections/todo.js:13"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " js/collections/todo.js:24"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " js/views/todo.js:48"
+        },
+        {
+            "message": "Missing item type\nUser: frank\nDate: 13-7-14",
+            "line": " js/models/todo.js:1"
+        },
+        {
+            "message": "Missing item type\nCreated with JetBrains PhpStorm.\nUser: frank\nDate: 13-7-13\nTime: 下午8:38",
+            "line": " js/views/app.js:1"
+        },
+        {
+            "message": "Missing item type\nUser: frank\nDate: 13-7-14",
+            "line": " js/views/todo.js:1"
+        },
+        {
+            "message": "Missing item type\nentry of script.",
+            "line": " js/main.js:1"
+        }
+    ]
+}

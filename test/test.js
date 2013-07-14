@@ -105,7 +105,7 @@ require(['js_dist/collections/todo', 'js_dist/models/todo', 'backbone', 'localSt
         module("Model");
 
 
-        test('model propertier', function () {
+        test('model properties should be defined correctly', function () {
             var todo = new Todo;
             strictEqual(todo.get('content'), '');
             strictEqual(todo.get('done'), false);

@@ -20,17 +20,30 @@ module.exports = function (grunt) {
                 files: 'js/**/*.js',
                 tasks: ['uglify']
             }
+        },
+        yuidoc:{
+            all:{
+                name:'<%= pkg.name %>',
+                description: '<%= pkg.description %>',
+                version: '<%= pkg.version %>',
+                options:{
+                    paths:'js/',
+                    outdir:'doc/'
+                }
+            }
         }
     })
 
     grunt.loadNpmTasks('grunt-contrib-qunit');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-yuidoc');
 
 
     grunt.registerTask('default', ['uglify']);
     grunt.registerTask('test', ['qunit']);
     grunt.registerTask('dev', ['uglify', 'watch']);
+    grunt.registerTask('doc', ['yuidoc']);
 
     // the qunit doesn't work on grunt, but OK in browsers.
     // see http://babble.byvernacchia.com/2013/06/05/qunit-grunt-and-require-problems.html

@@ -1,30 +1,43 @@
-# Framework Name TodoMVC Example
+# TodoMVC 
 
-This is a todo app built using [framework](https://example.com/framework).
+This is a todo app built using **Backbone** and **RequireJS**.
 
-## Framework
+To run the app, just open [index.html](./index.html).
 
-Short description of the framework. Which components are used (Backbone,
-Handlebars, ...)? What makes it different? What's the most awesome feature it
-has? Where can I find more information on it?
+The data was stored at localStorage.
 
-## Implementation
+## Unit Test
 
-How is the app structured? Are there deviations from the spec? If so, why?
+I do unit test via QUnit.
 
-## Running
+You can get the result of unit tests by opening [test/index.html](./test/index.html) in a browser.
 
-If there is a build step required to get the example working, explain it here.
+I intend to run the unit tests via nodejs, but I got a problem. It seems to be [a bug of grunt-contrib-qunit](http://babble.byvernacchia.com/2013/06/05/qunit-grunt-and-require-problems.html).
 
-To run the app, spin up an HTTP server and visit
-http://localhost/.../myexample/.
+But it doesn't master, QUnit can run in a browser.
+
+## Documentation
+
+Generated via YUIDoc, see [doc/index.html](doc/index.html)
+
+## Build
+
+I use grunt to compress file and generate documentation.
+
+	cd ToDoMVC
+	npm install
+	grunt # grunt will compress js file under ./js/ and copy the compressed file to js_dist
+	grunt doc # generate docomentation
+	grunt dev # grunt will watch all js files under ./js/. Once the files are changed, grunt do the compressing task.
+	grunt test # grunt run the unit tests and show the result. But it doesn't work somehow.
 
 ## Todo
-[x] add a task.
-[x] check / uncheck all tasks. ( checked task means done )
-[x] clear completed.
-[-] show all / active / completed tasks.
-[x] delete one task.
-[x] rename a task.
-[] auto save tasks.
-[] auto load tasks.
+
+ - [x] add a task.
+ - [x] check / uncheck all tasks. ( checked task means done )
+ - [x] clear completed.
+ - [-] show all / active / completed tasks.
+ - [x] delete one task.
+ - [x] rename a task.
+ - [x] auto save tasks.
+ - [x] auto load tasks.
