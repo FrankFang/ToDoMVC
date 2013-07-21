@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.top__inner { height: 100%; background: blue; }
+			.bot__inner { height: 100%; background: green; }
+			.top__left { position: absolute; left: 0; top: 0; background: green; width: 30px; }
+			.top__mid { margin: 0 30px; }
+			.top__right { position: absolute; right: 0; top: 0; background: green; width: 30px; }
+			.content { background: red; }
+			.top { height: 30px; overflow: hidden; position: relative; }
+			.bot { height: 30px; overflow: hidden; position: relative; }
+			.bot__left { position: absolute; left: 0; top: 0; background: yellow; width: 30px; }
+			.bot__mid { margin: 0 30px; }
+			.bot__right { position: absolute; right: 0; top: 0; background: yellow; width: 30px; }
+		</style>
+	</head>
+	<body>
+		<div class="container" style="width: 300px;">
+			<div class="top">
+				<div class="top__inner top__left"></div>
+				<div class="top__inner top__mid"></div>
+				<div class="top__inner top__right"></div>
+			</div>
+			<div>
+				<div class="content">
+					content <br>
+					content<br>
+				</div>
+			</div>
+			<div class="bot">
+				<div class="bot__inner bot__left"></div>
+				<div class="bot__inner bot__mid"></div>
+				<div class="bot__inner bot__right"></div>
+			</div>
+		</div>
+	</body>
+</html>

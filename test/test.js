@@ -38,7 +38,6 @@ require.config({
 });
 require(['js_dist/collections/todo', 'js_dist/models/todo', 'backbone', 'localStorage', 'js_dist/views/todo'],
     function (Todos, Todo, Backbone, localStorage, TodoView) {
-
         var todos = new Todos;
         QUnit.testStart(function () {
             todos.fetch();

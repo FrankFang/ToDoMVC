@@ -6,6 +6,7 @@ To run the app, just open [index.html](./index.html).
 
 The data was stored at localStorage.
 
+
 ## Unit Test
 
 I do unit test via QUnit.
@@ -36,8 +37,8 @@ I use grunt to compress file and generate documentation.
  - [x] add a task.
  - [x] check / uncheck all tasks. ( checked task means done )
  - [x] clear completed.
- - [-] show all / active / completed tasks.
  - [x] delete one task.
  - [x] rename a task.
  - [x] auto save tasks.
  - [x] auto load tasks.
+ - [-] show all / active / completed tasks. ( I do not implement this one. )
