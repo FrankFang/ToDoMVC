@@ -2,7 +2,7 @@
 
 This is a todo app built using **Backbone** and **RequireJS**.
 
-To run the app, just open [index.html](./index.html).
+To run the app, just open [index.html](./index.html) in a browser.
 
 The data was stored at localStorage.
 
